@@ -32,12 +32,10 @@ function hacerCalculos() {
 
     if(inputPersonas.value == 0) {
         inputPersonas.style = "border: 2px solid red;"
-        console.log("no puede ser cero");
     } else {
         inputPersonas.style = "border: unset;"
         datos.propinaPersona = datos.total * (datos.porcentaje/100) / datos.numeroPersonas;
         datos.totalPersona = (datos.total / datos.numeroPersonas) + datos.propinaPersona;
-        console.log(datos);
         mostrarValores();
     }
 }
@@ -59,7 +57,6 @@ botonesPorcentaje.forEach( btnPorcertaje => {
         e.target.setAttribute("id", "porcentaje-seleccionado");
         datos.porcentaje = Number(e.target.getAttribute("data-porcentaje"));
         hacerCalculos();
-        console.log(datos);
     })
 });
 
