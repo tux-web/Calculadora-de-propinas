@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de propinas</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Angel Tux">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="images/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <main>
+        <form>
+            <div class="input-container">        
+                <label for="input-total">Total</label>
+                <input type="number" id="input-total" min="1">
+                <i class="fa-solid fa-dollar-sign"></i>
+            </div>
+
+                <div class="input-container">
+                <label>Selecciona propina %</label>
+                <div id="botones-porcentaje">
+                    <button id="porcentaje-seleccionado" data-porcentaje="5">5%</button>
+                    <button data-porcentaje="10">10%</button>
+                    <button data-porcentaje="15">15%</button>
+                    <button data-porcentaje="25">25%</button>
+                    <button data-porcentaje="50">50%</button>
+                    <input type="number" placeholder="Personalizado" id="input-porcentaje">
+                </div>
+            </div>
+
+            <div class="input-container">
+                <label for="input-numero-personas">Numero de personas</label>
+                <input type="number" value="5" min="1" id="input-personas">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </form>
+
+        <section>
+            <div class="div-resultado">
+                <span class="span-mayor">Propina</span>
+                <span class="span-menor">/ persona</span>
+                <span  id="span-resultado-propina-persona">$0</span>
+            </div>
+            <div class="div-resultado">
+                <span class="span-mayor">Total</span>
+                <span class="span-menor">/ persona</span>
+                <span id="span-resultado-total">$0</span>
+            </div>
+
+            <button id="btn-resetear">RESETEAR</button>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
